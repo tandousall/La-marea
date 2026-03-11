@@ -32,7 +32,7 @@ function Menu() {
             <h3 className="text-xl font-bold">Soupe Yell (5000 FCFA)</h3>
             <p className="text-gray-400 mb-4">Soupe chaude et réconfortante.</p>
             <a
-              href="https://wa.me/221774051057?text=Bonjour%20je%20veux%20commander%20la%20Soupe%20Yell"
+              href="https://wa.me/221774051057?text=Bonjour%20je%20veux%20commander%20la%20Soupe%20Yell%205000%20FCFA"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition"
@@ -49,7 +49,7 @@ function Menu() {
             <h3 className="text-xl font-bold">Sea Food Boil (6000 FCFA)</h3>
             <p className="text-gray-400 mb-4">Plat de fruits de mer mijoté.</p>
             <a
-              href="https://wa.me/221774051057?text=Bonjour%20je%20veux%20commander%20le%20Seafood%20Boil"
+              href="https://wa.me/221774051057?text=Bonjour%20je%20veux%20commander%20le%20Seafood%20Boil%206000%20FCFA"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition"
@@ -66,7 +66,7 @@ function Menu() {
             <h3 className="text-xl font-bold">Lamb Chop (5000 FCFA)</h3>
             <p className="text-gray-400 mb-4">Dibi yapp Khar.</p>
             <a
-              href="https://wa.me/221774051057?text=Bonjour%20je%20veux%20commander%20le%20Lamb%20Chop"
+              href="https://wa.me/221774051057?text=Bonjour%20je%20veux%20commander%20le%20Lamb%20Chop%205000%20FCFA"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition"
@@ -83,7 +83,7 @@ function Menu() {
             <h3 className="text-xl font-bold">Attiéké Poisson (4500 FCFA)</h3>
             <p className="text-gray-400 mb-4">Attiéké servi avec poisson grillé.</p>
             <a
-              href="https://wa.me/221774051057?text=Bonjour%20je%20veux%20commander%20l%27Attieke%20Poisson"
+              href="https://wa.me/221774051057?text=Bonjour%20je%20veux%20commander%20l%27Attieke%20Poisson%204500%20FCFA"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition"
@@ -100,7 +100,7 @@ function Menu() {
             <h3 className="text-xl font-bold">Soupe Kandia (4500 FCFA)</h3>
             <p className="text-gray-400 mb-4">Riz blanc, sauce gombo avec fruits de mer.</p>
             <a
-              href="https://wa.me/221774051057?text=Bonjour%20je%20veux%20commander%20la%20Soupe%20Kandia"
+              href="https://wa.me/221774051057?text=Bonjour%20je%20veux%20commander%20la%20Soupe%20Kandia%204500%20FCFA"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition"
@@ -117,7 +117,7 @@ function Menu() {
             <h3 className="text-xl font-bold">Thiéré Simé (4500 FCFA)</h3>
             <p className="text-gray-400 mb-4">Couscous de mil à la sénégalaise.</p>
             <a
-              href="https://wa.me/221774051057?text=Bonjour%20je%20veux%20commander%20le%20Thiere%20Sime"
+              href="https://wa.me/221774051057?text=Bonjour%20je%20veux%20commander%20le%20Thiere%20Sime%204500%20FCFA"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition"
@@ -134,7 +134,7 @@ function Menu() {
             <h3 className="text-xl font-bold">Yassa Poulet (4500 FCFA)</h3>
             <p className="text-gray-400 mb-4">Poulet dans une sauce caramelisée.</p>
             <a
-              href="https://wa.me/221774051057?text=Bonjour%20je%20veux%20commander%20le%20Yassa%20Poulet"
+              href="https://wa.me/221774051057?text=Bonjour%20je%20veux%20commander%20le%20Yassa%20Poulet%204500%20FCFA"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition"
@@ -151,7 +151,7 @@ function Menu() {
             <h3 className="text-xl font-bold">Thieboudienne (3500 FCFA)</h3>
             <p className="text-gray-400 mb-4">Riz au poisson.</p>
             <a
-              href="https://wa.me/221774051057?text=Bonjour%20je%20veux%20commander%20le%20Thieboudienne"
+              href="https://wa.me/221774051057?text=Bonjour%20je%20veux%20commander%20le%20Thieboudienne%203500%20FCFA"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition"
@@ -167,7 +167,7 @@ function Menu() {
             <h3 className="text-xl font-bold">Jus Bissap (1000 FCFA)</h3>
             <p className="text-gray-400 mb-4">Hibiscus.</p>
             <a
-              href="https://wa.me/221774051057?text=Bonjour%20je%20veux%20commander%20le%20Jus%20de%20Fruits"
+              href="https://wa.me/221774051057?text=Bonjour%20je%20veux%20commander%20le%20Jus%20de%20Bissap%201000%20FCFA"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition"
@@ -183,7 +183,7 @@ function Menu() {
             <h3 className="text-xl font-bold">Jus de Fruits Locaux (1000 FCFA)</h3>
             <p className="text-gray-400 mb-4">Mélange de fruits frais.</p>
             <a
-              href="https://wa.me/221774051057?text=Bonjour%20je%20veux%20commander%20le%20Jus%20de%20Fruits"
+              href="https://wa.me/221774051057?text=Bonjour%20je%20veux%20commander%20le%20Jus%20de%20Fruits%201000%20FCFA"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition"
@@ -198,7 +198,7 @@ function Menu() {
             <h3 className="text-xl font-bold">Jus de Bouye (1000 FCFA)</h3>
             <p className="text-gray-400 mb-4">Frais et naturel.</p>
             <a
-              href="https://wa.me/221774051057?text=Bonjour%20je%20veux%20commander%20le%20Jus%20de%20Fruits"
+              href="https://wa.me/221774051057?text=Bonjour%20je%20veux%20commander%20le%20Jus%20de%20Bouye%201000%20FCFA"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition"
