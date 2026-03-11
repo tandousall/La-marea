@@ -12,7 +12,7 @@ function Menu() {
         <div className="bg-zinc-900 rounded-xl overflow-hidden">
           <img src="/pouletroti.jpg" className="w-full h-72 object-cover transition-transform duration-300 hover:scale-110" />
           <div className="p-6">
-            <h3 className="text-xl font-bold">Poulet rôti</h3>
+            <h3 className="text-xl font-bold">Poulet rôti (8000 FCFA)</h3>
             <p className="text-gray-400 mb-4">Poulet grillé aux épices.</p>
             <a
               href="https://wa.me/221774051057"
@@ -29,7 +29,7 @@ function Menu() {
         <div className="bg-zinc-900 rounded-xl overflow-hidden">
           <img src="/soupeyell.jpg" className="w-full h-72 object-cover transition-transform duration-300 hover:scale-110" />
           <div className="p-6">
-            <h3 className="text-xl font-bold">Soupe Yell</h3>
+            <h3 className="text-xl font-bold">Soupe Yell (5000 FCFA)</h3>
             <p className="text-gray-400 mb-4">Soupe chaude et réconfortante.</p>
             <a
               href="https://wa.me/221774051057"
@@ -46,7 +46,7 @@ function Menu() {
         <div className="bg-zinc-900 rounded-xl overflow-hidden">
           <img src="/seafood.jpg" className="w-full h-72 object-cover transition-transform duration-300 hover:scale-110" />
           <div className="p-6">
-            <h3 className="text-xl font-bold">Sea Food Boil</h3>
+            <h3 className="text-xl font-bold">Sea Food Boil (6000 FCFA)</h3>
             <p className="text-gray-400 mb-4">Plat de fruits de mer mijoté.</p>
             <a
               href="https://wa.me/221774051057"
@@ -63,7 +63,7 @@ function Menu() {
         <div className="bg-zinc-900 rounded-xl overflow-hidden">
           <img src="/dibi.jpg" className="w-full h-72 object-cover transition-transform duration-300 hover:scale-110" />
           <div className="p-6">
-            <h3 className="text-xl font-bold">Lamb Chop</h3>
+            <h3 className="text-xl font-bold">Lamb Chop (5000 FCFA)</h3>
             <p className="text-gray-400 mb-4">Dibi yapp Khar.</p>
             <a
               href="https://wa.me/221774051057"
@@ -80,7 +80,7 @@ function Menu() {
         <div className="bg-zinc-900 rounded-xl overflow-hidden">
           <img src="/atieke.jpg" className="w-full h-72 object-cover transition-transform duration-300 hover:scale-110" />
           <div className="p-6">
-            <h3 className="text-xl font-bold">Attiéké Poisson</h3>
+            <h3 className="text-xl font-bold">Attiéké Poisson (4500 FCFA)</h3>
             <p className="text-gray-400 mb-4">Attiéké servi avec poisson grillé.</p>
             <a
               href="https://wa.me/221774051057"
@@ -97,7 +97,7 @@ function Menu() {
         <div className="bg-zinc-900 rounded-xl overflow-hidden">
           <img src="/soupekandia.jpg" className="w-full h-72 object-cover transition-transform duration-300 hover:scale-110" />
           <div className="p-6">
-            <h3 className="text-xl font-bold">Soupe Kandia</h3>
+            <h3 className="text-xl font-bold">Soupe Kandia (4500 FCFA)</h3>
             <p className="text-gray-400 mb-4">Riz blanc, Sauce gombo avec fruits de mer.</p>
             <a
               href="https://wa.me/221774051057"
@@ -113,7 +113,7 @@ function Menu() {
            <div className="bg-zinc-900 rounded-xl overflow-hidden">
           <img src="/thiere.jpg" className="w-full h-72 object-cover transition-transform duration-300 hover:scale-110" />
           <div className="p-6">
-            <h3 className="text-xl font-bold">Thiere Sime</h3>
+            <h3 className="text-xl font-bold">Thiere Sime (4500 FCFA)</h3>
             <p className="text-gray-400 mb-4">Couscous de mil a la senegalaise.</p>
             <a
               href="https://wa.me/221774051057"
@@ -129,7 +129,7 @@ function Menu() {
            <div className="bg-zinc-900 rounded-xl overflow-hidden">
           <img src="/yassapoulet.jpg" className="w-full h-72 object-cover transition-transform duration-300 hover:scale-110" />
           <div className="p-6">
-            <h3 className="text-xl font-bold">Yassa Poulet</h3>
+            <h3 className="text-xl font-bold">Yassa Poulet (4500 FCFA)</h3>
             <p className="text-gray-400 mb-4">Poulet préparé dans une sauce caramelisée.</p>
             <a
               href="https://wa.me/221774051057"
@@ -145,7 +145,7 @@ function Menu() {
            <div className="bg-zinc-900 rounded-xl overflow-hidden">
           <img src="/tiepdieune.jpg" className="w-full h-72 object-cover transition-transform duration-300 hover:scale-110" />
           <div className="p-6">
-            <h3 className="text-xl font-bold">Thiep Dieune</h3>
+            <h3 className="text-xl font-bold">Thiep Dieune (3500 FCFA)</h3>
             <p className="text-gray-400 mb-4">Riz au poisson.</p>
             <a
               href="https://wa.me/221774051057"
