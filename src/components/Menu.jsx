@@ -1,223 +1,211 @@
+import { useState } from "react";
+
+/* Dish component OUTSIDE Menu */
+function Dish({ id, name, price, image, desc, qty, increase, decrease, addToCart }) {
+
+return (
+
+<div className="bg-zinc-900 rounded-xl overflow-hidden">
+
+<img
+src={image}
+className="w-full h-72 object-cover transition-transform duration-300 hover:scale-110"
+/>
+
+<div className="p-6">
+
+<h3 className="text-xl font-bold">
+{name} ({price} FCFA)
+</h3>
+
+<p className="text-gray-400 mb-4">{desc}</p>
+
+{/* Counter */}
+
+<div className="flex items-center gap-3 mb-4">
+
+<button
+onClick={() => decrease(id)}
+className="bg-gray-700 px-3 py-1 rounded"
+
+>
+
+*
+
+</button>
+
+<span className="text-lg font-bold">
+{qty[id]}
+</span>
+
+<button
+onClick={() => increase(id)}
+className="bg-gray-700 px-3 py-1 rounded"
+
+>
+
+*
+
+</button>
+
+</div>
+
+{/* Add to Cart */}
+<button
+onClick={() => addToCart(id,name,price)}
+className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded mb-3"
+
+>
+
+Ajouter au panier </button>
+
+</div>
+</div>
+
+);
+}
+
+/* MAIN MENU */
 function Menu() {
-return ( <section id="menu" className="py-20 bg-black text-white">
 
+const [qty, setQty] = useState({
+poulet: 0,
+soupeyell: 0,
+seafood: 0,
+lamb: 0,
+atieke: 0,
+kandia: 0,
+thiere: 0,
+yassa: 0,
+thieb: 0,
+bissap: 0,
+jusfruit: 0,
+bouye: 0
+});
 
-  <h2 className="text-4xl text-center font-bold text-orange-500 mb-12">
-    Meilleurs Plats de La Marea
-  </h2>
+const [cart, setCart] = useState([]);
 
-  <div className="grid md:grid-cols-3 gap-8 px-10">
+const increase = (item) => {
+setQty(prev => ({
+...prev,
+[item]: prev[item] + 1
+}));
+};
 
-    {/* Poulet rôti */}
-    <div className="bg-zinc-900 rounded-xl overflow-hidden">
-      <img src="/pouletroti.jpg" className="w-full h-72 object-cover transition-transform duration-300 hover:scale-110" />
-      <div className="p-6">
-        <h3 className="text-xl font-bold">Poulet rôti (8000 FCFA)</h3>
-        <p className="text-gray-400 mb-4">Poulet grillé aux épices.</p>
-        <a
-          href="https://wa.me/221774051057?text=Bonjour,%20je%20veux%20commander%20Poulet%20rôti%20(8000%20FCFA)"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition"
-        >
-          Commander sur WhatsApp
-        </a>
-      </div>
-    </div>
+const decrease = (item) => {
+setQty(prev => ({
+...prev,
+[item]: Math.max(prev[item] - 1, 0)
+}));
+};
 
-    {/* Soupe Yell */}
-    <div className="bg-zinc-900 rounded-xl overflow-hidden">
-      <img src="/soupeyell.jpg" className="w-full h-72 object-cover transition-transform duration-300 hover:scale-110" />
-      <div className="p-6">
-        <h3 className="text-xl font-bold">Soupe Yell (5000 FCFA)</h3>
-        <p className="text-gray-400 mb-4">Soupe chaude et réconfortante.</p>
-        <a
-          href="https://wa.me/221774051057?text=Bonjour,%20je%20veux%20commander%20Soupe%20Yell%20(5000%20FCFA)"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition"
-        >
-          Commander sur WhatsApp
-        </a>
-      </div>
-    </div>
+const addToCart = (id,name,price)=>{
 
-    {/* Seafood Boil */}
-    <div className="bg-zinc-900 rounded-xl overflow-hidden">
-      <img src="/seafood.jpg" className="w-full h-72 object-cover transition-transform duration-300 hover:scale-110" />
-      <div className="p-6">
-        <h3 className="text-xl font-bold">Sea Food Boil (6000 FCFA)</h3>
-        <p className="text-gray-400 mb-4">Plat de fruits de mer mijoté.</p>
-        <a
-          href="https://wa.me/221774051057?text=Bonjour,%20je%20veux%20commander%20Seafood%20Boil%20(6000%20FCFA)"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition"
-        >
-          Commander sur WhatsApp
-        </a>
-      </div>
-    </div>
+const quantity = qty[id];
 
-    {/* Lamb Chop */}
-    <div className="bg-zinc-900 rounded-xl overflow-hidden">
-      <img src="/dibi.jpg" className="w-full h-72 object-cover transition-transform duration-300 hover:scale-110" />
-      <div className="p-6">
-        <h3 className="text-xl font-bold">Lamb Chop (5000 FCFA)</h3>
-        <p className="text-gray-400 mb-4">Dibi yapp Khar.</p>
-        <a
-          href="https://wa.me/221774051057?text=Bonjour,%20je%20veux%20commander%20Lamb%20Chop%20(5000%20FCFA)"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition"
-        >
-          Commander sur WhatsApp
-        </a>
-      </div>
-    </div>
+if(quantity === 0) return;
 
-    {/* Attiéké */}
-    <div className="bg-zinc-900 rounded-xl overflow-hidden">
-      <img src="/atieke.jpg" className="w-full h-72 object-cover transition-transform duration-300 hover:scale-110" />
-      <div className="p-6">
-        <h3 className="text-xl font-bold">Attiéké Poisson (4500 FCFA)</h3>
-        <p className="text-gray-400 mb-4">Attiéké servi avec poisson grillé.</p>
-        <a
-          href="https://wa.me/221774051057?text=Bonjour,%20je%20veux%20commander%20Attieke%20Poisson%20(4500%20FCFA)"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition"
-        >
-          Commander sur WhatsApp
-        </a>
-      </div>
-    </div>
+const item = {
+id,
+name,
+price,
+quantity
+};
 
-    {/* Soupe Kandia */}
-    <div className="bg-zinc-900 rounded-xl overflow-hidden">
-      <img src="/soupekandia.jpg" className="w-full h-72 object-cover transition-transform duration-300 hover:scale-110" />
-      <div className="p-6">
-        <h3 className="text-xl font-bold">Soupe Kandia (4500 FCFA)</h3>
-        <p className="text-gray-400 mb-4">Riz blanc, sauce gombo avec fruits de mer.</p>
-        <a
-          href="https://wa.me/221774051057?text=Bonjour,%20je%20veux%20commander%20Soupe%20Kandia%20(4500%20FCFA)"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition"
-        >
-          Commander sur WhatsApp
-        </a>
-      </div>
-    </div>
+setCart(prev => [...prev,item]);
 
-    {/* Thiéré */}
-    <div className="bg-zinc-900 rounded-xl overflow-hidden">
-      <img src="/thiere.jpg" className="w-full h-72 object-cover transition-transform duration-300 hover:scale-110" />
-      <div className="p-6">
-        <h3 className="text-xl font-bold">Thiéré Simé (4500 FCFA)</h3>
-        <p className="text-gray-400 mb-4">Couscous de mil à la sénégalaise.</p>
-        <a
-          href="https://wa.me/221774051057?text=Bonjour,%20je%20veux%20commander%20Thiere%20Sime%20(4500%20FCFA)"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition"
-        >
-          Commander sur WhatsApp
-        </a>
-      </div>
-    </div>
+};
 
-    {/* Yassa Poulet */}
-    <div className="bg-zinc-900 rounded-xl overflow-hidden">
-      <img src="/yassapoulet.jpg" className="w-full h-72 object-cover transition-transform duration-300 hover:scale-110" />
-      <div className="p-6">
-        <h3 className="text-xl font-bold">Yassa Poulet (4500 FCFA)</h3>
-        <p className="text-gray-400 mb-4">Poulet dans une sauce caramelisée.</p>
-        <a
-          href="https://wa.me/221774051057?text=Bonjour,%20je%20veux%20commander%20Yassa%20Poulet%20(4500%20FCFA)"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition"
-        >
-          Commander sur WhatsApp
-        </a>
-      </div>
-    </div>
+/* Send order to WhatsApp */
+const sendOrder = () => {
 
-    {/* Thieboudienne */}
-    <div className="bg-zinc-900 rounded-xl overflow-hidden">
-      <img src="/tiepdieune.jpg" className="w-full h-72 object-cover transition-transform duration-300 hover:scale-110" />
-      <div className="p-6">
-        <h3 className="text-xl font-bold">Thieboudienne (3500 FCFA)</h3>
-        <p className="text-gray-400 mb-4">Riz au poisson.</p>
-        <a
-          href="https://wa.me/221774051057?text=Bonjour,%20je%20veux%20commander%20Thieboudienne%20(3500%20FCFA)"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition"
-        >
-          Commander sur WhatsApp
-        </a>
-      </div>
-    </div>
+let message = "Bonjour je veux commander:%0A";
 
-    {/* Jus Bissap */}
-    <div className="bg-zinc-900 rounded-xl overflow-hidden">
-      <img src="/bissap.jpg" className="w-full h-72 object-cover transition-transform duration-300 hover:scale-110" />
-      <div className="p-6">
-        <h3 className="text-xl font-bold">Jus Bissap (1000 FCFA)</h3>
-        <p className="text-gray-400 mb-4">Hibiscus.</p>
-        <a
-          href="https://wa.me/221774051057?text=Bonjour,%20je%20veux%20commander%20Jus%20de%20Bissap%20(1000%20FCFA)"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition"
-        >
-          Commander sur WhatsApp
-        </a>
-      </div>
-    </div>
+cart.forEach(item=>{
+message += `${item.quantity} ${item.name}%0A`;
+});
 
-    {/* Jus de Fruits */}
-    <div className="bg-zinc-900 rounded-xl overflow-hidden">
-      <img src="/jusdefruit.jpg" className="w-full h-72 object-cover transition-transform duration-300 hover:scale-110" />
-      <div className="p-6">
-        <h3 className="text-xl font-bold">Jus de Fruits Locaux (1000 FCFA)</h3>
-        <p className="text-gray-400 mb-4">Mélange de fruits frais.</p>
-        <a
-          href="https://wa.me/221774051057?text=Bonjour,%20je%20veux%20commander%20Jus%20de%20Fruits%20Locaux%20(1000%20FCFA)"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition"
-        >
-          Commander sur WhatsApp
-        </a>
-      </div>
-    </div>
+window.open(
+`https://wa.me/221774051057?text=${message}`,
+"_blank"
+);
 
-    {/* Jus de Bouye */}
-    <div className="bg-zinc-900 rounded-xl overflow-hidden">
-      <img src="/bouye.jpg" className="w-full h-72 object-cover transition-transform duration-300 hover:scale-110" />
-      <div className="p-6">
-        <h3 className="text-xl font-bold">Jus de Bouye (1000 FCFA)</h3>
-        <p className="text-gray-400 mb-4">Frais et naturel.</p>
-        <a
-          href="https://wa.me/221774051057?text=Bonjour,%20je%20veux%20commander%20Jus%20de%20Bouye%20(1000%20FCFA)"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition"
-        >
-          Commander sur WhatsApp
-        </a>
-      </div>
-    </div>
+};
 
-  </div>
+return (
+
+<section id="menu" className="py-20 bg-black text-white">
+
+<h2 className="text-4xl text-center font-bold text-orange-500 mb-12">
+Meilleurs Plats de La Marea
+</h2>
+
+<div className="grid md:grid-cols-3 gap-8 px-10">
+
+<Dish id="poulet" name="Poulet rôti" price="8000" image="/pouletroti.jpg" desc="Poulet grillé aux épices." qty={qty} increase={increase} decrease={decrease} addToCart={addToCart} />
+
+<Dish id="soupeyell" name="Soupe Yell" price="5000" image="/soupeyell.jpg" desc="Soupe chaude et réconfortante." qty={qty} increase={increase} decrease={decrease} addToCart={addToCart} />
+
+<Dish id="seafood" name="Sea Food Boil" price="6000" image="/seafood.jpg" desc="Plat de fruits de mer mijoté." qty={qty} increase={increase} decrease={decrease} addToCart={addToCart} />
+
+<Dish id="lamb" name="Lamb Chop" price="5000" image="/dibi.jpg" desc="Dibi yapp Khar." qty={qty} increase={increase} decrease={decrease} addToCart={addToCart} />
+
+<Dish id="atieke" name="Attiéké Poisson" price="4500" image="/atieke.jpg" desc="Attiéké servi avec poisson grillé." qty={qty} increase={increase} decrease={decrease} addToCart={addToCart} />
+
+<Dish id="kandia" name="Soupe Kandia" price="4500" image="/soupekandia.jpg" desc="Riz blanc sauce gombo." qty={qty} increase={increase} decrease={decrease} addToCart={addToCart} />
+
+<Dish id="thiere" name="Thiéré Simé" price="4500" image="/thiere.jpg" desc="Couscous de mil." qty={qty} increase={increase} decrease={decrease} addToCart={addToCart} />
+
+<Dish id="yassa" name="Yassa Poulet" price="4500" image="/yassapoulet.jpg" desc="Poulet sauce caramélisée." qty={qty} increase={increase} decrease={decrease} addToCart={addToCart} />
+
+<Dish id="thieb" name="Thieboudienne" price="3500" image="/tiepdieune.jpg" desc="Riz au poisson." qty={qty} increase={increase} decrease={decrease} addToCart={addToCart} />
+
+<Dish id="bissap" name="Jus Bissap" price="1000" image="/bissap.jpg" desc="Hibiscus." qty={qty} increase={increase} decrease={decrease} addToCart={addToCart} />
+
+<Dish id="jusfruit" name="Jus Fruits Locaux" price="1000" image="/jusdefruit.jpg" desc="Fruits frais." qty={qty} increase={increase} decrease={decrease} addToCart={addToCart} />
+
+<Dish id="bouye" name="Jus Bouye" price="1000" image="/bouye.jpg" desc="Frais et naturel." qty={qty} increase={increase} decrease={decrease} addToCart={addToCart} />
+
+</div>
+
+{/* CART */}
+
+<div id="panier" className="mt-20 px-10">
+
+<h2 className="text-3xl font-bold text-orange-500 mb-6">
+Panier
+</h2>
+
+{cart.map((item,index)=>(
+
+<div key={index} className="flex justify-between border-b py-2">
+
+<span>
+{item.name} x {item.quantity}
+</span>
+
+<span>
+{item.price * item.quantity} FCFA
+</span>
+
+</div>
+))}
+
+<button
+onClick={sendOrder}
+className="mt-6 bg-green-500 px-6 py-3 rounded text-white"
+
+>
+
+Commander sur WhatsApp </button>
+
+</div>
+
 
 </section>
 
-
-)
+);
 }
 
-export default Menu
+export default Menu;
+

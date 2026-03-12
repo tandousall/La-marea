@@ -1,18 +1,40 @@
 function Navbar() {
-  return (
-    <nav className="fixed w-full z-50 flex justify-between items-center px-10 py-5 bg-black/70 backdrop-blur">
+return ( <nav className="flex justify-between items-center bg-black text-white px-10 py-4">
 
-      <h1 className="text-2xl font-bold text-orange-500">
-        La Marea by A.S
-      </h1>
 
-      <div className="space-x-6">
-        <a href="#menu" className="hover:text-orange-500">Menu</a>
-        <a href="#contact" className="hover:text-orange-500">Contact</a>
-      </div>
+  <h1 className="text-orange-500 text-xl font-bold">
+    La Marea
+  </h1>
 
-    </nav>
-  )
+  <div className="flex gap-8 text-lg">
+
+    <a
+      href="#menu"
+      className="hover:text-orange-400 transition"
+    >
+      Menu
+    </a>
+
+    <a
+      href="#panier"
+      className="hover:text-orange-400 transition"
+    >
+      Panier
+    </a>
+
+    <a
+      href="#contact"
+      className="hover:text-orange-400 transition"
+    >
+      Contact
+    </a>
+
+  </div>
+
+</nav>
+
+
+);
 }
 
-export default Navbar
+export default Navbar;
